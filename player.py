@@ -5,9 +5,9 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from time import sleep
 
-DEVICE_ID="YOUR_DEVICE_ID"
-CLIENT_ID="YOUR_CLIENT_ID"
-CLIENT_SECRET="YOUR_CLIENT_SECRET"
+DEVICE_ID="DeviceID"
+CLIENT_ID="ClientID"
+CLIENT_SECRET="ClientSecret"
 
 while True:
     try:
@@ -25,16 +25,34 @@ while True:
             sp.transfer_playback(device_id=DEVICE_ID, force_play=False)
             
             # DONT include the quotation marks around the card's ID value, just paste the number
-            if (id=='RFID-CARDVALUE-1'):
-                
-                # playing a song
-                sp.start_playback(device_id=DEVICE_ID, uris=['spotify:track:2vSLxBSZoK0eha4AuhZlXV'])
-                sleep(2)
-                
-            elif (id=='RFID-CARDVALUE-2'):
+            if (id==124817002481):
                 
                 # playing an album
-                sp.start_playback(device_id=DEVICE_ID, context_uri='spotify:album:0JGOiO34nwfUdDrD612dOp')
+                sp.start_playback(device_id=DEVICE_ID, context_uri='spotify:album:1uyf3l2d4XYwiEqAb7t7fX')
+                sleep(2)
+                
+            elif (id==399694909361):
+                
+                # playing an album
+                sp.start_playback(device_id=DEVICE_ID, context_uri='spotify:album:7tBzJeTvJSZ254cu879LpK')
+                sleep(2)
+                
+            elif (id==674572816241):
+                
+                # playing a song
+                sp.start_playback(device_id=DEVICE_ID, uris=['spotify:track:4YOJFyjqh8eAcbKFfv88mV'])
+                sleep(2)
+                
+            elif (id==949450723121):
+                
+                # playing a song
+                sp.start_playback(device_id=DEVICE_ID, uris=['spotify:track:4kzvAGJirpZ9ethvKZdJtg'])
+                sleep(2)
+                
+            elif (id==674421821304):
+                
+                # playing a song
+                sp.start_playback(device_id=DEVICE_ID, uris=['spotify:track:47BBI51FKFwOMlIiX6m8ya'])
                 sleep(2)
                 
             # continue adding as many "elifs" for songs/albums that you want to play
